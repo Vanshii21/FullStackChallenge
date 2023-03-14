@@ -15,7 +15,7 @@ useEffect(()=>{
 }, [location])
 return (
     <div className="header">
-    <p className="logo">User Data</p>
+    <p className="logo" style={{color:'#b45309'}}><span style={{color:'#b45309'}}></span>User Data</p>
     <div className="header-right">
     <Link to="/">
     | <p className= {`${activeTab === "Home" ? "active" : ""}`} onClick={() => setActiveTab("Home")}>Home</p>

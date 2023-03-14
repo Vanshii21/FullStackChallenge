@@ -20,7 +20,7 @@ if(response.status===200){
     if (
     window.confirm("Are you sure that you wanted to delete that user record")
     ) {
-    const response = await axios.delete(`http://localhost: 5000/user/${id}`);
+    const response = await axios.delete(`http://localhost:5000/user/${id}`);
     if (response.status === 200) {
     toast.success (response.data);
     getUsers();
@@ -30,7 +30,7 @@ if(response.status===200){
   console.log("data=> ",data);
   return (
     <div style={{marginTop: "150px"}}>
-      <table className="styled-table">
+    {data.length!==0 ?   <table className="styled-table">
         <thead>
           <tr>
             <th style={{textAlign: "center"}}>No.</th>
@@ -66,7 +66,7 @@ if(response.status===200){
           })
           }
         </tbody>
-      </table>
+      </table> : <h3>No Report Found</h3>}
     </div>
   );
 };
